@@ -6,6 +6,7 @@ type Notification interface {
 	GetProviderType() string // aws, sendgrid, brevo
 }
 
+// abstract factory providers
 type NotificationProvider interface {
 	CreateEmail() Notification
 	CreateSms() Notification
